@@ -1,0 +1,143 @@
+.location{
+    width: 100%;
+    top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    display: flex;
+    background-color: black;
+    height: 500px;
+}
+
+.loggeinfirstsec{
+    background-color: white;
+}
+
+.loggeoutfirstsec{
+     background-color: black;
+}
+
+.firstsec{
+    width: 50%;
+    align-items: center;
+    padding-left: 50px;
+    color: white;
+}
+
+.changecity{
+    width: 100px;
+    height: 20px;
+    border-style: hidden;
+    background-color: black;
+    text-decoration: underline;
+    color: white;
+}
+
+.forminput{
+    width: 350px;
+    height: 50px;
+    border-style: hidden;
+    border-radius: 10px;
+
+    font-size: 17px;
+    padding-left: 50px;
+}
+
+.formbutton{
+    width: 120px;
+    height: 50px;
+    border-radius: 8px;
+    font-size: 16px;
+    border-style: hidden;
+}
+
+.picklocation h1{
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.pickupbutton{
+    text-align: center;
+    height: 40px;
+    width: 180px;
+    border-radius: 50px;
+    font-size: 18px;
+
+
+}
+
+.pickup-container svg{
+    font-size: 40px;
+
+    left: 15px;
+
+    pointer-events: none;
+}
+
+.pickup-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+
+}
+
+.headinglogin{
+
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pickup-input {
+    width: 400px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    padding: 10px 15px 15px 10px;
+    border-radius: 12px;
+    gap: 20px;
+
+    box-sizing: border-box;
+}
+
+.pickup-icon {
+    font-size: 20px;
+    color: #111;
+}
+
+.pickup-input input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 22px;
+    color: #333;
+}
+
+.pickup-input input::placeholder {
+    color: #555;
+}
+
+.location-arrow {
+    font-size: 20px;
+    cursor: pointer;
+    color: #111;
+}
+
+.pricebuttonlogin{
+    background-color: black;
+    color: white;
+    width: 100px;
+    height:50px;
+    border-style: hidden;
+}
+
+.pickuplogin{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 200px;
+}

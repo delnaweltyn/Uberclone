@@ -1,0 +1,255 @@
+.navbar{
+
+    height: auto;
+    height: 64px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: sticky;
+    top: 0;
+    /* background-color: black; */
+}
+
+.loggedin{
+     background-color: white;
+}
+.loggedout{
+     background-color: black;
+}
+
+
+.mainnav{
+    height: 50px;
+    display: flex;
+    position: relative;
+    margin-left: 50px;
+
+
+
+}
+
+.firstnav{
+    width: 70%;
+    height: 50px;
+    align-content: center;
+    justify-content: space-evenly;
+    margin-left: 20px;
+
+}
+
+.NavClass{
+    font-size: 14px;
+    font-weight: 500;
+    /* color: #FCFCFC;; */
+    text-decoration: none;
+    border-style: hidden;
+    border-radius: 50%;
+    /* background-color: #111111; */
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    border-top-right-radius: 999px;
+    border-bottom-right-radius: 999px;
+    border-top-left-radius: 999px;
+    border-bottom-left-radius: 999px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+
+}
+.loggeinavbutton{
+     background-color: white;
+     color: black;
+}
+.loggeoutnavbutton{
+    background-color: #111111;
+    color: #FCFCFC;;
+}
+
+.loggeoutnavbutton:hover{
+     background-color: #282828;
+}
+
+.loggeinavbutton:hover{
+     background-color: rgba(211, 208, 208, 0.356);
+}
+
+.heading{
+
+    height: 50px;
+    font-size: 20px;
+    align-content: center;
+    justify-content: center;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.loggedinheading{
+     color: black;
+     font-weight: lighter;
+}
+.loggedoutheading{
+    color: white;
+}
+
+.second_nav{
+    width: 30%;
+    height: 50px;
+    display: flex;
+    text-align: center;
+    align-content: center;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.signupbutton{
+    width: 70px;
+    height: 40px;
+    position: relative;
+    top: 0;
+    border-radius: 50px;
+}
+
+.signup-dropdown{
+    width: 180px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    background-color: #FCFCFC;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.Navdropdown{
+    color: #111111;
+    text-decoration: none;
+    justify-content: space-evenly;
+    gap: 15px;
+}
+
+.Navdropdown svg {
+  position: fixed;
+  right: 130px;
+  color: black;
+
+}
+
+.aboutbutton{
+    width: 90px;
+    height: 40px;
+    position: relative;
+    top: 0;
+    border-radius: 50px;
+}
+
+.about-dropdown{
+    width: 180px;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 350px;
+    background-color: #FCFCFC;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    text-align: left;
+    font-size: 16px;
+
+}
+
+.Aboutdropdown{
+    color: rgba(114, 112, 112, 0.961);
+    text-decoration: none;
+    justify-content: space-evenly;
+    gap: 15px;
+}
+
+.secondnavlogin{
+    display: flex;
+    gap: 10px;
+}
+
+.loginuser-dropdown{
+
+    width: 350px;
+    height: 400px;
+    /* display: flex;
+    flex-direction: column;*/
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    background-color: #FCFCFC;
+    gap: 20px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 800;
+    overflow-y: auto;
+    border-radius: 10px;
+
+}
+
+.first_profilediv{
+    display: flex;
+    gap: 80px;
+}
+
+.first_profilediv svg{
+    padding-left: 150px;
+    font-size: 60px;
+
+}
+
+.loginbutton{
+    width: 80px;
+    height: 80px;
+    border-style: hidden;
+}
+
+.second_profilediv{
+    display: flex;
+    gap: 50px;
+}
+
+.Third_profilediv{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.Third_profilediv hr{
+    width: 320px;
+    height: 5px;
+    background-color: grey;
+
+}
+.Navdropdown-login{
+    text-decoration: none;
+     color: black;
+
+
+}
+
+.Navdropdown-login svg{
+    padding-right: 30px;
+
+}
+.signoutbutton{
+    width: 320px;
+    color: red;
+    font-size: 16px;
+    border-style: hidden;
+}

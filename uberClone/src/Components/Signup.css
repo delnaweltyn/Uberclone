@@ -1,0 +1,34 @@
+.signup-container{
+    background-color: white;
+}
+.signup{
+    width: 100%;
+    height:400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    font-size: 30px;
+}
+
+.signup input,button{
+    width: 350px;
+    height:40px;
+    border-radius: 10px;
+}
+
+.signup button{
+    background-color: black;
+    color: whitesmoke;
+}
+
+.signuphead{
+    background-color: black;
+    color: white;
+
+    height: 70px;
+    align-content: center;
+    justify-content: center;
+    font-weight: bold;
+    padding-left: 50px;
+}

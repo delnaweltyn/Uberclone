@@ -1,0 +1,66 @@
+.navbarsec{
+    width: 100%;
+    background-color: black;
+    height: 60px;
+    display: flex;
+    position: relative;
+    top: 0;
+}
+
+.firstnav{
+    width: 70%;
+    position: fixed;
+    height: 50px;
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    align-items: center;
+    position: absolute;
+    top: 0;
+
+}
+
+.NavClass{
+    font-size: 14px;
+    font-weight: 500;
+    color: #FCFCFC;;
+    text-decoration: none;
+    border-style: hidden;
+    border-radius: 50%;
+    background-color: #111111;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    border-top-right-radius: 999px;
+    border-bottom-right-radius: 999px;
+    border-top-left-radius: 999px;
+    border-bottom-left-radius: 999px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.NavClass:hover{
+     background-color: #282828;
+}
+
+.heading{
+    color: white;
+    margin-left: 80px;
+}
+
+.second_nav{
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 50px;
+    display: flex;
+    justify-content: right;
+    margin-left: 900px;
+    gap: 10px;
+    position: absolute;
+}
+
+.NavClassright{
+}

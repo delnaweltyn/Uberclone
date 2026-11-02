@@ -1,0 +1,44 @@
+.location{
+    width: 100%;
+    height: auto;
+
+    display: flex;
+}
+
+.firstsec{
+    width: 50%;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.changecity{
+    width: 100px;
+    height: 20px;
+    border-style: hidden;
+    background-color: white;
+    text-decoration: underline;
+}
+
+.forminput{
+    width: 350px;
+    height: 50px;
+    border-style: hidden;
+    border-radius: 10px;
+    background-color: rgba(244, 244, 244, 0.65);
+    font-size: 17px;
+    padding-left: 50px;
+}
+
+.formbutton{
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+}
+
+.picklocation h1{
+    font-size: 60px;
+    padding-left: 120px;
+}

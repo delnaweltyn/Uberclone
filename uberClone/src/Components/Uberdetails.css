@@ -1,0 +1,76 @@
+.uberdetails{
+
+    margin-top: -25px;
+    padding-top: 20px;
+
+}
+
+.loggeinuberdetails{
+    background-color: white;
+    color: black;
+}
+
+.loggeoutuberdetails{
+    background-color: black;
+    color: white;
+}
+
+.carddetails{
+
+    margin-left: 50px;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    gap: 20px;
+}
+
+.card-container{
+    display: flex;
+    border-radius: 10px;
+    background-color: rgb(41, 41, 41);
+    padding-left: 20px;
+    padding-top: 20px;
+
+}
+
+
+.loggeincard-container{
+     background-color: white;
+     color: black;
+}
+
+.cardimage{
+    width: 120px;
+}
+
+.carditems button{
+    width: 100px;
+}
+
+.carditems{
+    align-content: center;
+    justify-content: center;
+}
+
+.requestridedetails{
+
+    margin-top: -25px;
+    padding-top: 50px;
+
+}
+
+.loggeinrequestridedetails{
+        background-color: white;
+    color: black;
+}
+
+.loggeoutrequestridedetails{
+        background-color: black;
+    color: white;
+}
+
+.rideinfodetails{
+    margin-left: 50px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
