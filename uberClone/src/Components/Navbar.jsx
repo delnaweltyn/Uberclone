@@ -85,9 +85,9 @@ function Navbar() {
 
                             {!userlogged ? (
                                 <>
-                                    <Link className="NavClass" to={'/Ride'}> <TbWorld /> EN</Link>
-                                    <Link className="NavClass" to={'/Drive'}>Help</Link>
-                                    <Link className="NavClass" to={'/Login'}>Login</Link>
+                                    <Link className={`NavClass ${userlogged ? 'loggeinavbutton' : 'loggeoutnavbutton'}`} to={'/Ride'}> <TbWorld /> EN</Link>
+                                    <Link className={`NavClass ${userlogged ? 'loggeinavbutton' : 'loggeoutnavbutton'}`} to={'/Drive'}>Help</Link>
+                                    <Link className={`NavClass ${userlogged ? 'loggeinavbutton' : 'loggeoutnavbutton'}`} to={'/Login'}>Login</Link>
                                     <div>
                                         <button onClick={() => setIsOpen(!isOpen)} className='signupbutton' >
                                             SignUp
@@ -107,11 +107,11 @@ function Navbar() {
                                 </>) :
 
                                 <div className='secondnavlogin'>
-                                    <Link className="NavClass" to={'/Ride'}> <TbWorld /> EN</Link>
-                                    <Link className="NavClass" to={'/Drive'}>Help</Link>
+                                    <Link className={`NavClass ${userlogged ? 'loggeinavbutton' : 'loggeoutnavbutton'}`} to={'/Ride'}> <TbWorld /> EN</Link>
+                                    <Link className={`NavClass ${userlogged ? 'loggeinavbutton' : 'loggeoutnavbutton'}`} to={'/Drive'}>Help</Link>
 
 
-                                    <button onClick={() => setIsOpen(!isOpen)} className='signupbutton' >
+                                    <button onClick={() => setIsOpen(!isOpen)} className='signupbutton userlogged' >
                                         {username} {!isOpen ? <MdOutlineKeyboardArrowDown /> : <MdOutlineKeyboardArrowUp />}
                                     </button>
 
