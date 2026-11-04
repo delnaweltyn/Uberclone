@@ -12,11 +12,35 @@ import { RiSquareFill } from "react-icons/ri";
 function Location() {
 
     const navigate = useNavigate()
+
+    const [pickuplocation,setPickuplocation] = useState("")
+    const [destination,setDestination] = useState("")
+
     const userlogged = JSON.parse(localStorage.getItem('loggeduser')) || ""
 
     const handlesubmit = (e) => {
             e.preventDefault()
-            navigate('/Ride')
+
+
+
+            navigate('/Login')
+
+
+
+    }
+
+        const handlesubmitlogin = (e) => {
+            e.preventDefault()
+
+            if( pickuplocation == "" || destination == "")
+            {
+                alert("Enter the pickup and destination location")
+                return
+            }
+            else{
+                navigate('/Ride')
+            }
+
 
     }
 
@@ -73,7 +97,7 @@ function Location() {
 
                         <TbCircleDotFilled className="pickup-icon" />
 
-                        <input
+                        <input value={pickuplocation} onChange={(e)=>setPickuplocation(e.target.value)}
                             type="text"
                             placeholder="Pickup location"
                         />
@@ -88,7 +112,7 @@ function Location() {
 
                         <RiSquareFill className="pickup-icon" />
 
-                        <input
+                        <input value={destination} onChange={(e)=>setDestination(e.target.value)}
                             type="text"
                             placeholder="Dropoff location"
                         />
@@ -97,7 +121,7 @@ function Location() {
 
 
                     </div>
-                    <button className='pricebuttonlogin'>See prices</button>
+                    <button onClick={handlesubmitlogin} className='pricebuttonlogin'>See prices</button>
                 </div>
 
              </div>

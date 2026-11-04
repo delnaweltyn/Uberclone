@@ -6,7 +6,6 @@
     padding-right: 20px;
     position: sticky;
     top: 0;
-    /* background-color: black; */
 }
 
 .loggedin{
@@ -258,3 +257,39 @@
     font-size: 16px;
     border-style: hidden;
 }
+
+.hamburgerbutton{
+    display: none;
+}
+
+@media screen and (max-width : 600px) {
+
+    .firstnav{
+        display: none;
+    }
+    .second_nav .NavClass{
+        display: none;
+    }
+
+    .settingsbutton{
+        display:flex;
+    }
+    .signupbutton{
+        position: fixed;
+        right: 80px;
+        top: 10px;
+    }
+    .hamburgerbutton{
+        position: fixed;
+        display: inline;
+        right: 10px;
+        width: 60px;
+    }
+
+    .signup-dropdown{
+        height: 400px;
+
+    }
+}
+
+

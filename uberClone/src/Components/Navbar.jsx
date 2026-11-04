@@ -20,8 +20,9 @@ function Navbar() {
 
     const [isOpen, setIsOpen] = useState(false)
     const [isAboutOpen, setIsAboutOpen] = useState(false)
+    const [isMenuOpen,setIsMenuOpen] = useState(false)
 
-    const userlogged = JSON.parse(localStorage.getItem('loggeduser')) || ""
+    const [userlogged,setUserlogged] = useState(JSON.parse(localStorage.getItem('loggeduser')) || "")
 
    let username = "";
    let displayName = "";
@@ -36,7 +37,9 @@ function Navbar() {
 
     const handlesignout =()=>
     {
-        localStorage.setItem('loggeduser',JSON.stringify(""))
+        localStorage.removeItem('loggeduser');
+        // localStorage.setItem('loggeduser',JSON.stringify(""))
+        setUserlogged(null)
         navigate('/')
 
     }
@@ -88,27 +91,42 @@ function Navbar() {
                                     <Link className={`NavClass ${userlogged ? 'loggeinavbutton' : 'loggeoutnavbutton'}`} to={'/Ride'}> <TbWorld /> EN</Link>
                                     <Link className={`NavClass ${userlogged ? 'loggeinavbutton' : 'loggeoutnavbutton'}`} to={'/Drive'}>Help</Link>
                                     <Link className={`NavClass ${userlogged ? 'loggeinavbutton' : 'loggeoutnavbutton'}`} to={'/Login'}>Login</Link>
-                                    <div>
+                                    <div className='settingsbutton'>
                                         <button onClick={() => setIsOpen(!isOpen)} className='signupbutton' >
                                             SignUp
                                         </button>
+                                        <button onClick={() => setIsMenuOpen(!isMenuOpen)} className='hamburgerbutton'><img width={'20px'} src="https://img.icons8.com/?size=100&id=120374&format=png&color=000000" alt="" /></button>
                                     </div>
+
+                                    {isMenuOpen && (
+                                        <div className='signup-dropdown'>
+                                                <Link className='Navdropdown' to={'/Ride'}>Ride</Link>
+                                                <Link className='Navdropdown'  to={'/Drive'}>Drive</Link>
+                                                <Link className='Navdropdown'  to={'/UberEats'}>UberEats</Link>
+                                                <Link className='Navdropdown'  to={'/Business'}>Business</Link>
+                                                <Link className='Navdropdown'  to={'/UberEats'}>UberEats</Link>
+                                                <Link className='Navdropdown'  to={'/About'}>About</Link>
+                                                 <Link className='Navdropdown'>Help</Link>
+                                                 <Link className='Navdropdown'> <TbWorld /> EN</Link>
+
+                                        </div>
+                                    )}
 
 
                                     {isOpen && (
                                         <div className="signup-dropdown">
-                                            <Link className="Navdropdown" to="/Signup">Ride <RiRouteFill /></Link>
-                                            <Link className="Navdropdown" to="/Signup">Drive <RiSteering2Line /></Link>
-                                            <Link className="Navdropdown" to="/Signup">Business <MdAddBusiness /></Link>
-                                            <Link className="Navdropdown" to="/Signup">Uber Eats <ImSpoonKnife /></Link>
+                                            <Link className="Navdropdown" to="/Ride" onClick={()=>setIsOpen(false)}>Ride <RiRouteFill /></Link>
+                                            <Link className="Navdropdown" to="/Drive">Drive <RiSteering2Line /></Link>
+                                            <Link className="Navdropdown" to="/Business">Business <MdAddBusiness /></Link>
+                                            <Link className="Navdropdown" to="/UberEats">Uber Eats <ImSpoonKnife /></Link>
                                         </div>
                                     )}
 
                                 </>) :
 
                                 <div className='secondnavlogin'>
-                                    <Link className={`NavClass ${userlogged ? 'loggeinavbutton' : 'loggeoutnavbutton'}`} to={'/Ride'}> <TbWorld /> EN</Link>
-                                    <Link className={`NavClass ${userlogged ? 'loggeinavbutton' : 'loggeoutnavbutton'}`} to={'/Drive'}>Help</Link>
+                                    <Link className={`NavClass ${userlogged ? 'loggeinavbutton' : 'loggeoutnavbutton'}`} to={'/'}> <TbWorld /> EN</Link>
+                                    <Link className={`NavClass ${userlogged ? 'loggeinavbutton' : 'loggeoutnavbutton'}`} to={'/'}>Help</Link>
 
 
                                     <button onClick={() => setIsOpen(!isOpen)} className='signupbutton userlogged' >
@@ -133,10 +151,10 @@ function Navbar() {
                                             <hr />
 
                                             <Link className="Navdropdown-login" to="/Signup"><FaUser /> Manage Account </Link>
-                                            <Link className="Navdropdown-login" to="/Signup"><RiRouteFill /> Ride </Link>
-                                            <Link className="Navdropdown-login" to="/Signup"><RiSteering2Line /> Drive & Deliver </Link>
-                                            <Link className="Navdropdown-login" to="/Signup"><MdAddBusiness /> Uber for Business </Link>
-                                            <Link className="Navdropdown-login" to="/Signup"><ImSpoonKnife /> Uber Eats </Link>
+                                            <Link className="Navdropdown-login" to="/Ride"><RiRouteFill /> Ride </Link>
+                                            <Link className="Navdropdown-login" to="/Drive"><RiSteering2Line /> Drive & Deliver </Link>
+                                            <Link className="Navdropdown-login" to="/Business"><MdAddBusiness /> Uber for Business </Link>
+                                            <Link className="Navdropdown-login" to="/Ubereats"><ImSpoonKnife /> Uber Eats </Link>
                                             <button onClick={handlesignout} className='signoutbutton' >Sign out</button>
                                             </div>
                                         </div>

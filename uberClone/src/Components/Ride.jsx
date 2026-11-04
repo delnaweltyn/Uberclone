@@ -9,6 +9,7 @@ import { TbCashBanknote } from "react-icons/tb";
 import { IoIosArrowForward } from "react-icons/io";
 import { CiCreditCard1 } from "react-icons/ci";
 import UberMap from './UberMap';
+import { FaHeart } from "react-icons/fa";
 
 
 
@@ -20,8 +21,63 @@ function Ride() {
 
   const [selectedpayment,setSelectedpayment] = useState("")
   const [isoption,setIsoption ] = useState(false)
+  const [showFavourite, setShowFavourite] = useState(false)
 
 
+
+    const selectedDriver = {
+    id: 1,
+    name: "John"
+  }
+
+  // Get favourite drivers from localStorage
+  const [favouriteDrivers, setFavouriteDrivers] = useState(
+    () => JSON.parse(localStorage.getItem('favouriteDrivers')) || []
+  )
+
+  // Selected favourite driver
+  const [requestedDriver, setRequestedDriver] = useState("")
+
+  const Handlerequestride = ()=>{
+    alert("Ride booked and completed successfully")
+    localStorage.setItem('Ridestatus',JSON.stringify("Completed"))
+    setShowFavourite(true)
+  }
+
+
+  const handleAddFavourite = () => {
+
+      const exists = favouriteDrivers.some(
+      driver => driver.id === selectedDriver.id
+    )
+
+    if (!exists) {
+
+      const updatedDrivers = [
+        ...favouriteDrivers,
+        selectedDriver
+      ]
+
+      setFavouriteDrivers(updatedDrivers)
+
+      localStorage.setItem(
+        'favouriteDrivers',
+        JSON.stringify(updatedDrivers)
+      )
+
+      alert("Driver added to your favourite list!")
+
+    } else {
+      alert("Driver already exists in your favourite list!")
+    }
+
+    setShowFavourite(false)
+  }
+
+  // Close favourite popup
+  const handleNoFavourite = () => {
+    setShowFavourite(false)
+  }
 
   const handlepayment = (item) =>{
     setSelectedpayment(item)
@@ -31,6 +87,12 @@ function Ride() {
     setIsoption(true)
   }
 
+    const handleSelectDriver = (driverId) => {
+
+    setRequestedDriver(
+      requestedDriver === driverId ? "" : driverId
+    )
+  }
 
   return (
       <div>
@@ -85,6 +147,49 @@ function Ride() {
 
         </div>
 
+
+        {favouriteDrivers.length > 0 && (
+
+            <div className='request-favourite'>
+
+              <h3>
+                <FaHeart /> Request a Favourite Driver
+              </h3>
+
+              <p>Choose your preferred driver (optional)</p>
+
+              {favouriteDrivers.map(driver => (
+
+                <div
+                  key={driver.id}
+                  className={`favourite-driver-option ${
+                    requestedDriver === driver.id ? "driver-selected" : ""
+                  }`}
+                  onClick={() => handleSelectDriver(driver.id)}
+                >
+
+                  <span>{driver.name}</span>
+
+                  <input
+                    type="checkbox"
+                    checked={requestedDriver === driver.id}
+                    onChange={() => handleSelectDriver(driver.id)}
+                  />
+
+                </div>
+
+              ))}
+
+              {requestedDriver && (
+                <p className='selected-driver-message'>
+                  Favourite driver selected!
+                </p>
+              )}
+
+            </div>
+          )}
+
+
                {/* paymentdetails */}
       <div className='mainpaymentdiv'>
         <div onClick={() => setShowPayment(true)} className='payment_option'>
@@ -94,8 +199,7 @@ function Ride() {
 
           <MdKeyboardArrowDown />
         </div>
-        <button className="request-button">
-          {`Request ${selectedride}`}
+        <button onClick={Handlerequestride} className="request-button">{`Request ${selectedride}`}
         </button>
       </div>
       </div>
@@ -130,6 +234,35 @@ function Ride() {
         </div>
       )}
 
+ {showFavourite && (
+        <div className='favourite-overlay'>
+
+          <div className='favourite-dialog'>
+
+            <h2>Add Favourite Driver</h2>
+
+            <p>
+              Would you like to add
+              <strong> {selectedDriver.name} </strong>
+              to your favourite drivers?
+            </p>
+
+            <div className='favourite-buttons'>
+
+              <button onClick={handleNoFavourite}>
+                No
+              </button>
+
+              <button onClick={handleAddFavourite}>
+                Yes
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+      )}
 
 
     </div>

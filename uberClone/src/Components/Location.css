@@ -141,3 +141,28 @@
     justify-content: space-evenly;
     margin-bottom: 200px;
 }
+
+@media screen and (max-width : 600px) {
+    .secondsec{
+        display: none;
+    }
+    .forminput{
+    width: auto;
+    height: 50px;
+    }
+
+    .pickup-input {
+    width: auto;
+    height: 60px;
+
+
+}
+.pickuplogin{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+}
+
+
+
