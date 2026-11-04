@@ -18,8 +18,7 @@ function Location() {
 
     const userlogged = JSON.parse(localStorage.getItem('loggeduser')) || ""
 
-    const handlesubmit = (e) => {
-            e.preventDefault()
+    const handlesubmit = () => {
 
 
 
