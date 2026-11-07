@@ -5,7 +5,7 @@ import './Uberdetails.css'
 
 function Uberdetails() {
 
-    const userlogged = JSON.parse(localStorage.getItem('loggeduser')) || null
+    const userlogged = JSON.parse(localStorage.getItem('loggeduser')) || ""
     return (
         <div>
             <div className={`uberdetails ${userlogged ? 'loggeinuberdetails' : 'loggeoutuberdetails'}`} >

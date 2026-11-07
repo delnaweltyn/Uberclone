@@ -139,7 +139,7 @@ footer{
 
 }
 
-@media screen and (max-width : 600px)
+@media screen and (max-width: 1200px)
 {
 
     footer{
@@ -164,5 +164,8 @@ footer{
 
         .secondcopy{
             display: none;
+        }
+        .pricebutton{
+            width: auto;
         }
 }

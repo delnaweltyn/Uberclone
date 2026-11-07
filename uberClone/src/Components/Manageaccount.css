@@ -1,0 +1,106 @@
+.heading-account{
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    color: white;
+    align-content: center;
+    padding-left: 50px;
+}
+
+.sidebar-account{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.sidebar-account button{
+    border-style: hidden;
+    border-radius: unset;
+    width: 250px;
+    text-align: left;
+        cursor: pointer;
+}
+
+.sidebar-account button.selected{
+    background-color: rgba(157, 160, 160, 0.269);
+}
+
+
+.account-overlay{
+    display: flex;
+}
+
+.homeaccount{
+    width: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+
+}
+
+.account-icon{
+    font-size: 84px;
+}
+
+.homeaccountbuttons{
+    display: flex;
+      gap: 20px;
+}
+
+.homeaccountbuttons button{
+    width: 150px;
+    height: 80px;
+    border-style: hidden;
+    background-color: rgb(246, 246, 246);
+
+
+}
+
+.securitydetails{
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-right: 0;
+
+}
+
+.securitydetails svg{
+
+}
+
+.personalinfo{
+     margin-left: 50px;
+    width: 700px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 1024px) {
+    .sidebar-account{
+        display: inline;
+    }
+    .account-overlay{
+        display: inline;
+    }
+    .securitydetails {
+        width: 200px;
+    }
+    .homeaccount{
+        display: inline;
+
+    }
+    .privacylasthead{
+        width: 250px;
+        text-wrap: balance;
+    }
+    .privacylastpara{
+         width: 250px;
+        text-wrap: wrap;
+    }
+}

@@ -75,16 +75,20 @@
 
 }
 
-@media screen and (max-width : 600px) {
+@media screen and (max-width: 1200px) {
     .carddetails{
         display: grid;
         grid-template-columns: auto;
     }
 
     .rideinfodetails{
-                display: grid;
-        grid-template-columns: auto;
-    }
 
+       display: grid;
+        grid-template-columns: auto;
+        justify-content: left;
+    }
+    .loggeincard-container{
+        width: 300px;
+    }
 
 }

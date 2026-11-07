@@ -22,7 +22,7 @@ function Navbar() {
     const [isAboutOpen, setIsAboutOpen] = useState(false)
     const [isMenuOpen,setIsMenuOpen] = useState(false)
 
-    const [userlogged,setUserlogged] = useState(JSON.parse(localStorage.getItem('loggeduser')) || "")
+    const userlogged = JSON.parse(localStorage.getItem('loggeduser')) || ""
 
    let username = "";
    let displayName = "";
@@ -31,6 +31,7 @@ function Navbar() {
     {
          username =userlogged.Name.split('@')[0];
          displayName = username.charAt(0).toUpperCase() + username.slice(1);
+         localStorage.setItem('loggedusername',JSON.stringify(displayName));
     }
 
     const navigate = useNavigate()
@@ -39,7 +40,6 @@ function Navbar() {
     {
         localStorage.removeItem('loggeduser');
         // localStorage.setItem('loggeduser',JSON.stringify(""))
-        setUserlogged(null)
         navigate('/')
 
     }
@@ -150,7 +150,7 @@ function Navbar() {
                                             <div className='Third_profilediv'>
                                             <hr />
 
-                                            <Link className="Navdropdown-login" to="/Signup"><FaUser /> Manage Account </Link>
+                                            <Link className="Navdropdown-login" to="/manageaccount"><FaUser /> Manage Account </Link>
                                             <Link className="Navdropdown-login" to="/Ride"><RiRouteFill /> Ride </Link>
                                             <Link className="Navdropdown-login" to="/Drive"><RiSteering2Line /> Drive & Deliver </Link>
                                             <Link className="Navdropdown-login" to="/Business"><MdAddBusiness /> Uber for Business </Link>

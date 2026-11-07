@@ -7,6 +7,7 @@ import Drive from './Components/Drive'
 import Signup from './Components/Signup'
 import Login from './Components/Login'
 import Navbarroute from './Components/Navbarroute'
+import Mangeaccount from './Components/Mangeaccount'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Route path='/Drive' element={<Drive />} />
         <Route path='/Signup' element={<Signup />} />
         <Route path='/Login' element={<Login />} />
+        <Route path='/manageaccount' element={< Mangeaccount />} />
 
       </Routes>
     </>
